@@ -10,5 +10,6 @@ namespace HG.Infrastructure.ResponseModel
     {
         public string Username { get; set; }
         public string PostContent { get; set; }
+        public int LikeCount { get; set; }
     }
 }

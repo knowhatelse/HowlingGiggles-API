@@ -17,6 +17,7 @@ namespace HG.Infrastructure.Factories
             {
                 Username = model.Username,
                 PostContent = model.PostContent,
+                LikeCount = 0,
             };
         }
 
@@ -26,6 +27,7 @@ namespace HG.Infrastructure.Factories
             {
                 Username = model.Username,
                 PostContent = model.PostContent,
+                LikeCount = model.LikeCount,
             };
         }
     }
