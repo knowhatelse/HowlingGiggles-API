@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HG.API", "HG.API\HG.API.csproj", "{9E74DADC-7384-4702-8D29-F917A086D643}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HG.Core", "HG.Core\HG.Core.csproj", "{00850FFB-2746-448D-A9FA-B21F402A9279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HG.Infrastructure", "HG.Infrastructure\HG.Infrastructure.csproj", "{9DACC165-9C79-458E-8E4F-57775B3BCF69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9E74DADC-7384-4702-8D29-F917A086D643}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E74DADC-7384-4702-8D29-F917A086D643}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E74DADC-7384-4702-8D29-F917A086D643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00850FFB-2746-448D-A9FA-B21F402A9279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00850FFB-2746-448D-A9FA-B21F402A9279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00850FFB-2746-448D-A9FA-B21F402A9279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00850FFB-2746-448D-A9FA-B21F402A9279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DACC165-9C79-458E-8E4F-57775B3BCF69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DACC165-9C79-458E-8E4F-57775B3BCF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DACC165-9C79-458E-8E4F-57775B3BCF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DACC165-9C79-458E-8E4F-57775B3BCF69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
