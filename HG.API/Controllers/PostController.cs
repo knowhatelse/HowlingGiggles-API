@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HG.API.Controllers
 {
-    [Route("/[controlller]")]
+    [Route("/[controller]")]
     [ApiController]
     public class PostController : Controller
     {
