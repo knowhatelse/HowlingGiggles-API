@@ -1,4 +1,5 @@
 ﻿using HG.Infrastructure.RequestModels;
+using HG.Infrastructure.Services.PostService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HG.API.Controllers
@@ -7,32 +8,45 @@ namespace HG.API.Controllers
     [ApiController]
     public class PostController : Controller
     {
+        private readonly IPostService postService;
+        public PostController(IPostService postService)
+        {
+             this.postService = postService;
+        }
         [HttpGet("getall")]
         public async Task<IActionResult> GetAllPosts()
         {
-            return Ok();
+            var posts = await this.postService.GetAllPosts();    
+            return Ok(posts);
         }
 
         [HttpGet("get/{postId}")]
         public async Task<IActionResult> GetPost(int postId)
         {
-            return Ok();
+            var post = await this.postService.GetPostById(postId);
+            if(post.Username == null)
+            {
+                return NotFound($"The post with the Id:{postId} does not exist!");
+            }
+            return Ok(post);
         }
         [HttpPost("add")]
         public async Task<IActionResult> AddPost([FromBody] PostRequestModel postRequest)
         {
-            return Ok();
+            var newPost = await this.postService.AddPost(postRequest);
+            return Ok(newPost);
         }
         [HttpPut("update/{postId}")]
         public async Task<IActionResult> UpdatePost(int postId, [FromBody] PostRequestModel postRequest)
         {
-            return Ok();
+            return Ok(await this.postService.UpdatePost(postId,postRequest));
         }
 
         [HttpDelete("delete/{postId}")]
         public async Task<IActionResult> DeletePost(int postId)
         {
-            return Ok();
+            var result = await this.postService.DeletePost(postId);
+            return Ok(result);
         }
 
     }
