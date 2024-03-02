@@ -8,5 +8,6 @@ public class Post
     public int Id { get; set; }
     public string Username { get; set; }
     public string PostContent { get; set; }
+    public int LikeCount { get; set; }
     public bool isDeleted { get; set; }
 }
