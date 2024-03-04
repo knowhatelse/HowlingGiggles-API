@@ -45,7 +45,7 @@ namespace HG.Infrastructure.Services.PostService
                 var response = PostFactory.CreateResponse(post);
                 return response;
             }
-           return new NoPostResponseModel($"No post found with {postId}")
+            return new NoPostResponseModel($"No post found with {postId}");
         }
 
         public async Task<PostResponseModel> UpdatePost(int postId, PostRequestModel post)
