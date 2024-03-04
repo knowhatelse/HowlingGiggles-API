@@ -40,12 +40,12 @@ namespace HG.Infrastructure.Services.PostService
         public async Task<object> GetPostById(int postId)
         {
             var post = await this.PostRepository.GetByIdAsync(postId);
-            if(post is not null)
+            if (post is not null)
             {
                 var response = PostFactory.CreateResponse(post);
                 return response;
             }
-            return new NoPostResponseModel($"No post found with ID:{postId}");
+           return new NoPostResponseModel($"No post found with {postId}")
         }
 
         public async Task<PostResponseModel> UpdatePost(int postId, PostRequestModel post)
