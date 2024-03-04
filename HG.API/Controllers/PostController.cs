@@ -27,7 +27,7 @@ namespace HG.API.Controllers
             var post = await this.postService.GetPostById(postId);
             if(post is NoPostResponseModel)
             {
-                return NotFound($"The post with the Id:{postId} does not exist!");
+                return NotFound(post);
             }
             return Ok(post);
         }
