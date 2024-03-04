@@ -1,4 +1,5 @@
 ﻿using HG.Infrastructure.RequestModels;
+using HG.Infrastructure.ResponseModel;
 using HG.Infrastructure.Services.PostService;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,7 +25,7 @@ namespace HG.API.Controllers
         public async Task<IActionResult> GetPost(int postId)
         {
             var post = await this.postService.GetPostById(postId);
-            if(post.Username == null)
+            if(post is NoPostResponseModel)
             {
                 return NotFound($"The post with the Id:{postId} does not exist!");
             }
