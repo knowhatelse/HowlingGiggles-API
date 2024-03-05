@@ -1,4 +1,6 @@
 using HG.Infrastructure;
+using HG.Infrastructure.Repository;
+using HG.Infrastructure.Repository.EF_Core;
 using HG.Infrastructure.Services.PostService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -14,6 +16,7 @@ builder.Services.AddDbContext<HowlingGigglesContext>(options =>
 builder.Services.AddCors();
 
 builder.Services.AddScoped<IPostService, PostService>();
+builder.Services.AddScoped<IPostRepository, PostRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

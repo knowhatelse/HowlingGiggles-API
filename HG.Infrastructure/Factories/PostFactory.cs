@@ -25,6 +25,7 @@ namespace HG.Infrastructure.Factories
         {
             return new PostResponseModel()
             {
+                Id = model.Id,
                 Username = model.Username,
                 PostContent = model.PostContent,
                 LikeCount = model.LikeCount,

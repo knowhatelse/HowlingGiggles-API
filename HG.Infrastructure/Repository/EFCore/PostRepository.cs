@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HG.Infrastructure.Repository.EF_Core
 {
-    internal class PostRepository(HowlingGigglesContext howlingGigglesContext) : IPostRepository
+    public class PostRepository(HowlingGigglesContext howlingGigglesContext) : IPostRepository
     {
         private readonly HowlingGigglesContext howlingGigglesContext = howlingGigglesContext;
 
