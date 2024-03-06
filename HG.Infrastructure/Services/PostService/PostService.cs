@@ -55,6 +55,7 @@ namespace HG.Infrastructure.Services.PostService
             {
                 selectedPost.Username = post.Username;
                 selectedPost.PostContent = post.PostContent;
+                selectedPost.LikeCount = post.LikeCount;
 
                 await this.PostRepository.UpdateAsync(selectedPost);
                 var response = PostFactory.CreateResponse(selectedPost);
